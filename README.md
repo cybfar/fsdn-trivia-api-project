@@ -24,6 +24,6 @@ The [frontend](./frontend/README.md) directory contains a complete React fronten
 
 ### Backend
 
-The [backend](./backend/README.md) directory contains a partially completed Flask and SQLAlchemy server. You will work primarily in `__init__.py` to define your endpoints and can reference models.py for DB and SQLAlchemy setup. These are the files you'd want to edit in the backend:
+The [backend](./backend/README.md) directory contains a Flask and SQLAlchemy server. 
 
 > View the [Backend README](./backend/README.md) to learn more about installing the backend and how the API works.
