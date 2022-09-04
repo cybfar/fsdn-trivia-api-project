@@ -127,6 +127,9 @@ def create_app(test_config=None):
         
         if ("question" and "answer" and "difficulty" and "category") not in request_data:
             abort(400, 'Missing Field')
+            
+        if question == "" or answer == "" or difficulty == "" or category == "":
+            abort(400, 'Request datas should not be empty')
         
         try:
             #
