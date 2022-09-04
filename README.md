@@ -1,3 +1,82 @@
+# TRIVIA API : Development and Documentation Final Project
+
+## Trivia App
+
+Trivia API is a game in which players can test their knowledge in different categories by answering trivia questions.
+
+In Trivia App, we can:
+
+1. Display questions - both all questions and by category. Questions should show the question, category and difficulty rating by default and can show/hide the answer.
+2. Delete questions.
+3. Add questions and require that they include question and answer text.
+4. Search for questions based on a text query string.
+5. Play the quiz game, randomizing either all questions or within a specific category.
+
+## Getting Started
+### Pre-requisites and Local Development
+
+The project is divided into two parts.
+A backend part made in Flask and a frontend part made in React.
+Developers using this project should already have Python3, pip and node installed on their local machines.
+### Frontend
+
+The [frontend](./frontend/) directory contains a complete React frontend to consume the data from the Flask server.
+To start the frontend, run the following commands from the frontend folder:
+    
+    npm install //To install dependencies
+    npm start //To run the frontend
+By default, the frontend will run on localhost:3000
+
+
+### Backend
+
+The [backend](./backend) directory contains a Flask and SQLAlchemy server.
+To setup the Trivia API, install the required dependencies by navigating to the `/backend` directory and run:
+
+```bash
+pip install -r requirements.txt
+```
+
+#### Set up the Database
+
+With Postgres running, create a `trivia` database:
+
+```bash
+createdb trivia
+```
+
+Populate the database using the `trivia.psql` file provided. From the `backend` folder in terminal run:
+
+```bash
+psql trivia < trivia.psql
+```
+
+#### Run the application
+To run the application run the following commands:
+
+```bash
+export FLASK_APP=flaskr
+export FLASK_DEBUG=On
+flask run
+```
+The `FLASK_DEBUG=On` will detect file changes and restart the server automatically.
+The application is run on http://127.0.0.1:5000/ by default and is a proxy in the frontend configuration.
+
+
+## Running Tests
+
+All test are in the `test_flaskr.py` file in the `backend` folder and use the unittest library.
+
+To deploy the tests, run
+
+```bash
+dropdb trivia_test
+createdb trivia_test
+psql trivia_test < trivia.psql
+python test_flaskr.py
+```
+
+The first time you run the tests, omit the dropdb command.
 
 ## API Reference
 ### Getting Started
