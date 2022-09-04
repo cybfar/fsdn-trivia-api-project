@@ -363,3 +363,8 @@ POST /quizzes
   "success": true
 }
 ```
+
+## Authors
+
+- [@cybfar](https://github.com/cybfar) for editing some files in the project
+- All project files were created by [Udacity](https://github.com/udacity) as a template for the Development and Documentation Final Project.
